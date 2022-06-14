@@ -50,3 +50,17 @@ AmazonEC2ReadOnlyAccess
 AmazonVPCReadOnlyAccess
 ```
 
+#### Running the program
+
+Authentication to AWS is done using normal boto3 methods documented here
+[AWS authentication](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
+
+The configuration file location will first be attempted from the local directory
+where a file named 'config' could be located alongside this script. If it
+doesn't exist, normal AWS methods are attempted.
+
+See the config.env example file which just mirrors (and in fact just points to)
+the config file location in the current directory as a convenience. It can still
+be located whereever and used the same way you normally use your
+~.aws/credentials, etc mappings.
+
